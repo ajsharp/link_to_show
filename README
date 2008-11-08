@@ -1,0 +1,13 @@
+LinkToShow
+==========
+
+We often need to display one link if a model instance meets a certain condition, and display another if the model fails that condition. A good example is when you want to display a link to a model on it's edit form to the 'show' action. If the model is active, then let's provide a link to the public show action (/products/1). If it's inactive (!@product.active), then let's provide a link to another action (maybe /admin/products/1).
+
+
+Example
+=======
+
+link_to_show(@product, :condition => @product.active)
+
+
+Copyright (c) 2008 Alex Sharp, released under the MIT license
